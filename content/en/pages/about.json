@@ -1,0 +1,38 @@
+{
+  "slug": "about",
+  "title": "About us",
+  "translationKey": "about",
+  "updatedAt": "2026-09-19",
+  "seo": {
+    "title": "About Desh Bhakt",
+    "description": "Who we are, what we believe and why we think patriotism is best shown through everyday duty."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "heading": "About Desh Bhakt",
+      "sub": "A citizens' initiative to make love for the country visible in what we do, not only what we say."
+    },
+    {
+      "type": "richText",
+      "markdown": "## Our belief\n\nIndia's freedom was won by ordinary people who gave their time, comfort and sometimes their lives. We honour them best by **keeping the promise of the Constitution alive** in our own lives.\n\nDesh Bhakt is open to everyone, of every faith, language and region. We do not support or oppose any political party."
+    },
+    {
+      "type": "cardGrid",
+      "heading": "Our values",
+      "columns": 4,
+      "cards": [
+        { "icon": "users", "title": "Unity", "text": "Diversity is our strength. We speak in every language and welcome every community." },
+        { "icon": "scale", "title": "Constitution first", "text": "Rights and duties go hand in hand." },
+        { "icon": "heart", "title": "Respect", "text": "For our heroes, our symbols and each other." },
+        { "icon": "hand", "title": "Service", "text": "Small, steady action beats loud gestures." }
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Join us",
+      "buttonLabel": "Get in touch",
+      "path": "/contact"
+    }
+  ]
+}

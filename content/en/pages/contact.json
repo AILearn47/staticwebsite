@@ -1,0 +1,21 @@
+{
+  "slug": "contact",
+  "title": "Contact us",
+  "translationKey": "contact",
+  "updatedAt": "2026-09-19",
+  "seo": {
+    "title": "Contact Desh Bhakt",
+    "description": "Write to Desh Bhakt to volunteer, share a story or ask a question."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "heading": "Contact us",
+      "sub": "Want to volunteer, share a freedom story or ask a question? We would love to hear from you."
+    },
+    {
+      "type": "contactForm",
+      "heading": "Send us a message"
+    }
+  ]
+}

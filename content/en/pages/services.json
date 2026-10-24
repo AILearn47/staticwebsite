@@ -1,0 +1,32 @@
+{
+  "slug": "services",
+  "title": "Our work",
+  "translationKey": "services",
+  "updatedAt": "2026-09-19",
+  "seo": {
+    "title": "Our work — freedom stories, Constitution and civic duty",
+    "description": "The programmes Desh Bhakt runs: freedom stories, Constitution awareness, civic service and national symbols."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "heading": "Our work",
+      "sub": "Four simple programmes that anyone can take part in."
+    },
+    {
+      "type": "cardGrid",
+      "columns": 2,
+      "cards": [
+        { "icon": "flag", "title": "Stories of freedom", "text": "We collect and retell the stories of freedom fighters, including those history books rarely mention, so that young people know whose shoulders they stand on." },
+        { "icon": "book", "title": "Know your Constitution", "text": "Short, jargon-free explainers on the Preamble, Fundamental Rights and Fundamental Duties, suitable for schools and community groups." },
+        { "icon": "hand", "title": "Civic service", "text": "Neighbourhood clean-ups, voter awareness, tree planting and respect for public property: patriotism you can practise on a Sunday morning." },
+        { "icon": "star", "title": "National symbols", "text": "The meaning behind the Tiranga, the National Anthem and the State Emblem, and the correct way to display and honour them." }
+      ]
+    },
+    {
+      "type": "banner",
+      "tone": "info",
+      "text": "Programme dates and locations are announced on our Articles page and by email."
+    }
+  ]
+}

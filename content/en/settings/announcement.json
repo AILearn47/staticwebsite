@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "text": "New: read our guide to the 11 Fundamental Duties.",
+  "tone": "info",
+  "linkLabel": "Read now",
+  "path": "/news/fundamental-duties"
+}

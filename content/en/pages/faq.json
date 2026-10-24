@@ -1,0 +1,26 @@
+{
+  "slug": "faq",
+  "title": "Frequently asked questions",
+  "translationKey": "faq",
+  "updatedAt": "2026-09-19",
+  "seo": {
+    "title": "FAQ",
+    "description": "Answers to common questions about Desh Bhakt, how to take part and how we work."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "heading": "Frequently asked questions"
+    },
+    {
+      "type": "faq",
+      "items": [
+        { "q": "Is Desh Bhakt a government body or political party?", "a": "No. We are an independent citizens' initiative. We are not affiliated with any government body or political party." },
+        { "q": "Who can take part?", "a": "Any resident of India, or anyone who cares about India, of any age, faith, language or background." },
+        { "q": "Do I need any experience?", "a": "No. Reading an article and doing one small civic action already counts." },
+        { "q": "How do I show respect to the national flag?", "a": "Follow the Flag Code of India: display it with the saffron band on top, never let it touch the ground, and keep it clean and undamaged. Our article on the Tiranga explains more." },
+        { "q": "Where can I check official information?", "a": "Always confirm laws and schemes on official government portals. Our content is for awareness and is not legal advice." }
+      ]
+    }
+  ]
+}

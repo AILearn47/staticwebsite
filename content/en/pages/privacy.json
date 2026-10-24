@@ -1,0 +1,16 @@
+{
+  "slug": "privacy",
+  "title": "Privacy policy",
+  "translationKey": "privacy",
+  "updatedAt": "2026-09-19",
+  "seo": {
+    "title": "Privacy policy",
+    "description": "How Desh Bhakt handles the information you send us."
+  },
+  "blocks": [
+    {
+      "type": "richText",
+      "markdown": "## What we collect\n\nThis website does not require an account. If you use the contact form we receive the name, email address and message you enter, and nothing else.\n\n## How we use it\n\nWe use your details only to reply to you. We do not sell or share them with third parties.\n\n## Analytics\n\nIf analytics is enabled on this site it is used only to count visits in aggregate.\n\n## Your choices\n\nWrite to us at any time to ask us to delete your message.\n\n*Replace this sample text with a policy reviewed for your organisation before launch.*"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Our Work",
+    "news": "Articles",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "getInvolved": "Get Involved"
+  },
+  "a11y": {
+    "skip": "Skip to main content",
+    "menu": "Menu",
+    "mainNav": "Main navigation",
+    "footerNav": "Footer navigation",
+    "breadcrumbs": "Breadcrumb",
+    "language": "Language",
+    "whatsapp": "Chat on WhatsApp"
+  },
+  "common": { "readMore": "Read more" },
+  "news": {
+    "title": "Articles",
+    "description": "Articles on the freedom struggle, the Constitution and everyday civic duty.",
+    "empty": "No articles yet."
+  },
+  "form": {
+    "name": "Your name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending…",
+    "success": "Thank you! We have received your message.",
+    "error": "Sorry, something went wrong. Please try again."
+  },
+  "footer": { "rights": "All rights reserved." },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you are looking for does not exist or has moved.",
+    "home": "Go to home page"
+  }
+}

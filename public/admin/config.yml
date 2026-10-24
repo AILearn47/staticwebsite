@@ -1,0 +1,257 @@
+# Sveltia / Decap CMS configuration.
+# Before go-live: set `repo` and `base_url` (the shared Sveltia CMS Auth worker on Cloudflare).
+#
+# Each language is its own set of collections, so the folder layout stays content/<locale>/...
+# and editors simply pick "Pages (हिंदी)" etc. Pages are linked across languages by translationKey.
+
+backend:
+  name: github
+  repo: YOUR_GITHUB_USER/deshbhakt
+  branch: main
+  base_url: https://sveltia-cms-auth.YOUR_SUBDOMAIN.workers.dev
+
+publish_mode: editorial_workflow # draft -> PR -> preview environment -> publish
+media_folder: public/assets/uploads
+public_folder: /assets/uploads
+site_url: https://www.deshbhakt.in
+locale: en
+
+# ---- shared field definitions (YAML anchors) -------------------------------------------------
+x-link-fields: &linkFields
+  - { name: label, label: Label, widget: string }
+  - { name: path, label: Link (e.g. /contact), widget: string }
+
+x-block-types: &blockTypes
+  - name: hero
+    label: Hero
+    widget: object
+    fields:
+      - { name: heading, label: Heading, widget: string }
+      - { name: sub, label: Sub-heading, widget: text, required: false }
+      - { name: image, label: Image, widget: image, required: false }
+      - { name: ctas, label: Buttons, widget: list, required: false, fields: *linkFields }
+  - name: richText
+    label: Rich text
+    widget: object
+    fields:
+      - { name: markdown, label: Text, widget: markdown }
+  - name: cardGrid
+    label: Card grid
+    widget: object
+    fields:
+      - { name: heading, label: Heading, widget: string, required: false }
+      - { name: columns, label: Columns, widget: select, options: [2, 3, 4], default: 3, value_type: int }
+      - name: cards
+        label: Cards
+        widget: list
+        fields:
+          - { name: icon, label: Icon, widget: select, required: false, options: [shield, flag, book, users, heart, star, scale, hand, map, tree, school, megaphone] }
+          - { name: title, label: Title, widget: string }
+          - { name: text, label: Text, widget: text, required: false }
+          - { name: path, label: Link, widget: string, required: false }
+  - name: faq
+    label: FAQ
+    widget: object
+    fields:
+      - { name: heading, label: Heading, widget: string, required: false }
+      - name: items
+        label: Questions
+        widget: list
+        fields:
+          - { name: q, label: Question, widget: string }
+          - { name: a, label: Answer, widget: text }
+  - name: steps
+    label: Steps
+    widget: object
+    fields:
+      - { name: heading, label: Heading, widget: string, required: false }
+      - name: items
+        label: Steps
+        widget: list
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: text, label: Text, widget: text, required: false }
+  - name: imageText
+    label: Image + text
+    widget: object
+    fields:
+      - { name: heading, label: Heading, widget: string, required: false }
+      - { name: markdown, label: Text, widget: markdown, required: false }
+      - { name: image, label: Image, widget: image }
+      - { name: alt, label: Image description (accessibility), widget: string, required: false }
+      - { name: imageSide, label: Image side, widget: select, options: [left, right], default: right }
+  - name: gallery
+    label: Gallery
+    widget: object
+    fields:
+      - { name: heading, label: Heading, widget: string, required: false }
+      - name: images
+        label: Images
+        widget: list
+        fields:
+          - { name: src, label: Image, widget: image }
+          - { name: alt, label: Description (accessibility), widget: string, required: false }
+          - { name: caption, label: Caption, widget: string, required: false }
+  - name: cta
+    label: Call to action
+    widget: object
+    fields:
+      - { name: heading, label: Heading, widget: string }
+      - { name: text, label: Text, widget: text, required: false }
+      - { name: buttonLabel, label: Button label, widget: string }
+      - { name: path, label: Button link, widget: string }
+  - name: contactForm
+    label: Contact form
+    widget: object
+    fields:
+      - { name: heading, label: Heading, widget: string, required: false }
+  - name: banner
+    label: Banner
+    widget: object
+    fields:
+      - { name: text, label: Text, widget: text }
+      - { name: tone, label: Tone, widget: select, options: [info, success, warning], default: info }
+  - name: embed
+    label: YouTube video
+    widget: object
+    fields:
+      - { name: provider, label: Provider, widget: hidden, default: youtube }
+      - { name: id, label: YouTube video ID (the part after v=), widget: string }
+      - { name: title, label: Video title (accessibility), widget: string, required: false }
+  - name: table
+    label: Table
+    widget: object
+    fields:
+      - { name: heading, label: Heading, widget: string, required: false }
+      - { name: columns, label: Column headings, widget: list, field: { name: column, label: Column, widget: string } }
+      - name: rows
+        label: Rows
+        widget: list
+        fields:
+          - { name: cells, label: Cells (one per column), widget: list, field: { name: cell, label: Cell, widget: string } }
+  - name: stats
+    label: Statistics
+    widget: object
+    fields:
+      - { name: heading, label: Heading, widget: string, required: false }
+      - name: items
+        label: Figures
+        widget: list
+        fields:
+          - { name: value, label: Value, widget: string }
+          - { name: label, label: Label, widget: string }
+  - name: logoStrip
+    label: Logo strip
+    widget: object
+    fields:
+      - { name: heading, label: Heading, widget: string, required: false }
+      - name: logos
+        label: Logos
+        widget: list
+        fields:
+          - { name: src, label: Logo, widget: image }
+          - { name: alt, label: Name (accessibility), widget: string }
+          - { name: url, label: Link, widget: string, required: false }
+
+x-page-fields: &pageFields
+  - { name: title, label: Title, widget: string }
+  - { name: slug, label: URL part (e.g. about-us), widget: string, hint: 'Lowercase letters, numbers and hyphens. Use "home" only for the home page.' }
+  - { name: translationKey, label: Translation key, widget: string, hint: 'Use the SAME key on the English, Hindi and Marathi versions of one page. It links the languages together.' }
+  - { name: updatedAt, label: Last updated, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD, required: false }
+  - name: seo
+    label: Search engine (SEO)
+    widget: object
+    required: false
+    collapsed: true
+    fields:
+      - { name: title, label: Search title, widget: string, required: false }
+      - { name: description, label: Search description, widget: text, required: false }
+      - { name: ogImage, label: Share image, widget: image, required: false }
+      - { name: noindex, label: Hide from search engines, widget: boolean, default: false, required: false }
+  - { name: blocks, label: Page sections, widget: list, types: *blockTypes }
+
+x-news-fields: &newsFields
+  - { name: title, label: Title, widget: string }
+  - { name: slug, label: URL part, widget: string }
+  - { name: translationKey, label: Translation key (same on all languages), widget: string }
+  - { name: date, label: Date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD }
+  - { name: excerpt, label: Short summary, widget: text, required: false }
+  - { name: cover, label: Cover image, widget: image, required: false }
+  - { name: body, label: Article, widget: markdown }
+
+x-announcement-fields: &announcementFields
+  - { name: enabled, label: Show banner, widget: boolean, default: false }
+  - { name: text, label: Text, widget: string, required: false }
+  - { name: tone, label: Tone, widget: select, options: [info, success, warning], default: info }
+  - { name: linkLabel, label: Link text, widget: string, required: false }
+  - { name: path, label: Link, widget: string, required: false }
+
+# ---- collections -----------------------------------------------------------------------------
+collections:
+  - name: pages_en
+    label: Pages (English)
+    folder: content/en/pages
+    extension: json
+    format: json
+    create: true
+    slug: '{{fields.slug}}'
+    summary: '{{title}}'
+    fields: *pageFields
+  - name: pages_hi
+    label: Pages (हिंदी)
+    folder: content/hi/pages
+    extension: json
+    format: json
+    create: true
+    slug: '{{fields.slug}}'
+    summary: '{{title}}'
+    fields: *pageFields
+  - name: pages_mr
+    label: Pages (मराठी)
+    folder: content/mr/pages
+    extension: json
+    format: json
+    create: true
+    slug: '{{fields.slug}}'
+    summary: '{{title}}'
+    fields: *pageFields
+
+  - name: news_en
+    label: Articles (English)
+    folder: content/en/news
+    extension: json
+    format: json
+    create: true
+    slug: '{{fields.slug}}'
+    summary: '{{title}}'
+    sortable_fields: [date, title]
+    fields: *newsFields
+  - name: news_hi
+    label: Articles (हिंदी)
+    folder: content/hi/news
+    extension: json
+    format: json
+    create: true
+    slug: '{{fields.slug}}'
+    summary: '{{title}}'
+    sortable_fields: [date, title]
+    fields: *newsFields
+  - name: news_mr
+    label: Articles (मराठी)
+    folder: content/mr/news
+    extension: json
+    format: json
+    create: true
+    slug: '{{fields.slug}}'
+    summary: '{{title}}'
+    sortable_fields: [date, title]
+    fields: *newsFields
+
+  - name: settings
+    label: Site banner
+    files:
+      - { name: announcement_en, label: Banner (English), file: content/en/settings/announcement.json, fields: *announcementFields }
+      - { name: announcement_hi, label: Banner (हिंदी), file: content/hi/settings/announcement.json, fields: *announcementFields }
+      - { name: announcement_mr, label: Banner (मराठी), file: content/mr/settings/announcement.json, fields: *announcementFields }
+
+# site.config.json (colours, logo, navigation) is intentionally NOT editable here.

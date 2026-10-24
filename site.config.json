@@ -1,0 +1,112 @@
+{
+  "siteId": "deshbhakt",
+  "name": { "en": "Desh Bhakt", "hi": "देशभक्त", "mr": "देशभक्त" },
+  "tagline": {
+    "en": "Love for the nation, shown in action",
+    "hi": "देश के प्रति प्रेम, कर्म के रूप में",
+    "mr": "देशावरील प्रेम, कृतीतून"
+  },
+  "domain": "https://www.deshbhakt.in",
+
+  "i18n": {
+    "defaultLocale": "en",
+    "locales": ["en", "hi", "mr"],
+    "localeNames": { "en": "English", "hi": "हिंदी", "mr": "मराठी" },
+    "pathPrefix": { "en": "", "hi": "/hi", "mr": "/mr" },
+    "hreflangRegion": { "en": "en-IN", "hi": "hi-IN", "mr": "mr-IN" },
+    "fallbackToDefault": true
+  },
+
+  "brand": {
+    "logo": { "light": "/assets/logo.svg", "dark": "/assets/logo-dark.svg" },
+    "favicon": "/assets/favicon.svg",
+    "ogImage": "/assets/og.png"
+  },
+
+  "theme": {
+    "preset": "civic",
+    "colors": {
+      "primary": "#1B3A8C",
+      "onPrimary": "#FFFFFF",
+      "accent": "#FF9933",
+      "onAccent": "#14181F",
+      "green": "#138808",
+      "surface": "#FFFFFF",
+      "surfaceAlt": "#F5F7FA",
+      "text": "#14181F",
+      "muted": "#5B6572",
+      "border": "#E3E8EF"
+    },
+    "colorsDark": {
+      "primary": "#0E1B45",
+      "onPrimary": "#FFFFFF",
+      "surface": "#0F1420",
+      "surfaceAlt": "#161C2B",
+      "text": "#EEF1F6",
+      "muted": "#A7B0BE",
+      "border": "#2A3348"
+    },
+    "fonts": {
+      "heading": "Poppins",
+      "body": "Noto Sans",
+      "indic": "Noto Sans Devanagari"
+    },
+    "radius": "12px",
+    "density": "comfortable",
+    "darkMode": "auto"
+  },
+
+  "navigation": {
+    "header": [
+      { "key": "home", "path": "/" },
+      { "key": "about", "path": "/about" },
+      { "key": "services", "path": "/services" },
+      { "key": "news", "path": "/news" },
+      { "key": "faq", "path": "/faq" },
+      { "key": "contact", "path": "/contact" }
+    ],
+    "footer": [
+      { "key": "privacy", "path": "/privacy" },
+      { "key": "faq", "path": "/faq" },
+      { "key": "contact", "path": "/contact" }
+    ],
+    "cta": { "key": "getInvolved", "path": "/contact" }
+  },
+
+  "features": {
+    "blog": true,
+    "faq": true,
+    "contactForm": true,
+    "languageSwitcher": true,
+    "adSlot": false,
+    "whatsappFloat": { "enabled": true, "number": "" }
+  },
+
+  "seo": {
+    "titleTemplate": "%s | Desh Bhakt",
+    "defaultDescription": {
+      "en": "Stories of freedom, the Constitution and everyday civic duty — helping every citizen love the nation through action.",
+      "hi": "स्वतंत्रता की गाथाएँ, संविधान और रोज़मर्रा के नागरिक कर्तव्य — हर नागरिक के देशप्रेम को कर्म में बदलने की पहल।",
+      "mr": "स्वातंत्र्याच्या गाथा, संविधान आणि दैनंदिन नागरी कर्तव्ये — प्रत्येक नागरिकाचे देशप्रेम कृतीत उतरवण्याचा उपक्रम."
+    },
+    "organization": { "name": "Desh Bhakt", "type": "NGO", "sameAs": [] },
+    "verification": { "google": "", "bing": "" }
+  },
+
+  "contact": {
+    "email": "hello@deshbhakt.in",
+    "phone": "",
+    "address": { "locality": "", "region": "", "country": "IN" },
+    "formEndpoint": "/api/contact"
+  },
+
+  "analytics": { "ga4": "", "plausible": "" },
+
+  "legal": {
+    "disclaimer": {
+      "en": "Not affiliated with any government body or political party. Always verify official information on government portals.",
+      "hi": "यह किसी सरकारी संस्था या राजनीतिक दल से संबद्ध नहीं है। आधिकारिक जानकारी सरकारी पोर्टल पर अवश्य जाँचें।",
+      "mr": "ही कोणत्याही सरकारी संस्थेशी किंवा राजकीय पक्षाशी संलग्न नाही. अधिकृत माहिती सरकारी पोर्टलवर नक्की तपासा."
+    }
+  }
+}

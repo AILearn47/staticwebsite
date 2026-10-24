@@ -1,0 +1,57 @@
+{
+  "slug": "home",
+  "title": "Home",
+  "translationKey": "home",
+  "updatedAt": "2026-09-19",
+  "seo": {
+    "title": "Desh Bhakt — Love for the nation, shown in action",
+    "description": "Stories of freedom, the Constitution and everyday civic duty. Desh Bhakt helps every citizen turn love for India into action."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "heading": "Love for the nation, shown in action",
+      "sub": "True patriotism is not only slogans on a holiday. It is knowing our history, respecting our Constitution and doing our duty every single day.",
+      "ctas": [
+        { "label": "Get involved", "path": "/contact" },
+        { "label": "Read our articles", "path": "/news" }
+      ]
+    },
+    {
+      "type": "stats",
+      "heading": "Dates every citizen should know",
+      "items": [
+        { "value": "15 Aug 1947", "label": "India becomes independent" },
+        { "value": "26 Jan 1950", "label": "The Constitution comes into force" },
+        { "value": "11", "label": "Fundamental Duties in Article 51A" }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "heading": "What we do",
+      "columns": 4,
+      "cards": [
+        { "icon": "flag", "title": "Stories of freedom", "text": "Lesser-known accounts of the people and movements that won our independence.", "path": "/services" },
+        { "icon": "book", "title": "Know your Constitution", "text": "Plain-language explanations of our rights, duties and institutions.", "path": "/services" },
+        { "icon": "hand", "title": "Civic service", "text": "Simple, everyday actions: cleanliness, voting, respect for public property.", "path": "/services" },
+        { "icon": "star", "title": "National symbols", "text": "The meaning of the Tiranga, the Anthem and the Emblem, and how to honour them.", "path": "/services" }
+      ]
+    },
+    {
+      "type": "steps",
+      "heading": "How to take part",
+      "items": [
+        { "title": "Learn", "text": "Read an article and share what you learn with your family." },
+        { "title": "Act", "text": "Pick one small civic action in your neighbourhood this month." },
+        { "title": "Inspire", "text": "Tell us what you did so we can encourage others to do the same." }
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Ready to serve the nation?",
+      "text": "Write to us. Whether you have an hour a week or an idea to share, there is a place for you.",
+      "buttonLabel": "Contact us",
+      "path": "/contact"
+    }
+  ]
+}
